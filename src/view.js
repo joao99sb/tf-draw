@@ -95,7 +95,9 @@ export class View {
 
   cleanHandCanvas() {
     const handCtx = this.#handCanvas.getContext("2d")
-    handCtx.clearRect(0, 0, config.video.width, config.video.height)
+    const width = this.#handCanvas.width
+    const height = this.#handCanvas.height
+    handCtx.clearRect(0, 0, width, height)
   }
 
   setInDrawModeDrawCanvas() {
