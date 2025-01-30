@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+    <title>FingerPose Example</title>
+
+    <link rel="stylesheet" href="./css/video.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js"
+      type="text/javascript"
+    ></script>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        user-select: none;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="status-section">
+        <div class="status">Modo: Normal</div>
+        <div class="status-indicators">
+          <div class="indicator">
+            <span class="emoji">✋</span>
+            <span class="mode">Draw</span>
+          </div>
+          <div class="indicator">
+            <span class="emoji">✊</span>
+            <span class="mode">Normal</span>
+          </div>
+          <div class="indicator">
+            <span class="emoji">✌️</span>
+            <span class="mode">Erase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-container">
+        <div class="video-spining-board" class="layer"></div>
+
+        <div class="video-content">
+          <video class="layer video" playsinline></video>
+          <canvas class="layer hand-canvas"></canvas>
+          <canvas class="layer draw-canvas"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="./src/index.js" type="module"></script>
+  </body>
+</html>
